@@ -1,0 +1,122 @@
+
+
+<html>
+    <head>
+        <title>Login</title>
+
+
+        <style>
+        .container { 
+top:90%;
+position:absolute; 
+left:35%;
+right:40%
+margin-left:-25%;
+margin-top:-25%;
+border-top-left-radius:25px;
+border-bottom-left-radius:25px;
+border-bottom-right-radius: 25px;
+border-top-right-radius: 25px;
+
+
+        padding: 25px;  
+        background-color: darkgrey;  
+        justify-content: center;
+       
+        }  
+        body {
+        display: block;
+        background-image: url("image.png");
+        margin: 18px;
+        background-size:1250px;
+       }
+        form {  
+        border: 3px solid #f1f1f1;  
+        text-align:center;
+        }  
+        #name,#pass,#email{
+        width: 100%;  
+        margin: 8px 0;  
+        padding: 12px 20px;      
+        border: 2px solid darkblack;  
+        box-sizing: border-box;  
+        }
+        #login{
+            width:25%;
+            padding:6px;  
+            margin: 6px 0px;  
+            border: 4px;
+            border-radius:8px 8px 8px 8px;
+            background-color:black;
+            color:#f1f1f1;
+            font-size: 15px;
+        }
+       
+        </style>
+ 
+
+
+    </head>
+
+<body
+background-image: url("image.png");
+style="font-family: Bahnschrift,font-size=35px"
+ ><center>
+    <h1 style="background-color:#000000; color:white">MOBIHUB 
+
+</h1>
+    <form name="registration">
+        <div class="container" align="center">
+        <table align="center" cellpadding="10" cellspacing="10">
+            <tr >
+                <td> <label style="font-size:20px" for="username"><b>Username</b></label></td>
+                <td> <input type="text" placeholder="Enter Username" id="username" name="username" required></td>
+            </tr>
+
+            
+            <tr>
+                <td> <label style="font-size:20px" for="password"><b>Password</b></label></td>
+                <td>  <input type="password" placeholder="Enter Password" id="password" name="password" required></td>
+            </tr>
+     
+
+            <tr>
+                <td colspan="2" align="center">  <input type="button" name="Login" id="login" value="Login" onclick="validate()" 0 required></td>
+            </tr>
+            
+           
+        </table>
+<p> Don't have an account? <a href="signup.html" style="color:darkblack";font-size:"8px">Register</a></p>
+         
+
+         </div>
+       
+    </form>
+</center>
+
+<script>
+function validate() {
+    var username = document.registration.username.value;
+    // window.location.href="www.google.com";
+    var password = document.forms["registration"]["password"].value;
+   
+
+    if (username.length <=5) {
+        alert("Please enter a valid user name which is length larger than 5.");
+        return false;
+    }
+
+    if (password.length <=4) {
+        alert("Please enter a password which is length larger than 4.");
+        return false;
+    }
+
+    
+    alert("Login Success!");
+    window.location.href="home.html";
+
+    return true;
+}
+</script>
+</body>
+</html>
